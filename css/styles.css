@@ -765,14 +765,14 @@ input,textarea{font-family:inherit;outline:none}
 /* ===== CONTACT ===== */
 .contact-grid-modern {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-top: 48px;
   width: 100%;
 }
 
 .contact-card-v2 {
-  padding: 24px;
+  padding: 24px 16px;
   border-radius: var(--radius-sm);
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -781,77 +781,62 @@ input,textarea{font-family:inherit;outline:none}
   align-items: center;
   text-align: center;
   transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-card-v2:hover {
-  border-color: var(--border-hover);
+  border-color: var(--accent-1);
   background: var(--bg-card-hover);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(196, 122, 74, 0.15);
+}
+
+.link-card:hover h4 {
+  color: var(--accent-1);
 }
 
 .c-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
   background: rgba(196, 122, 74, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--accent-1);
 }
 
 .c-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .c-text h4 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--text-primary);
-}
-
-.c-text p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  word-break: break-all;
-}
-
-.c-socials {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.c-socials a {
-  color: var(--text-secondary);
   transition: var(--transition);
 }
 
-.c-socials a:hover {
-  color: var(--accent-1);
-  transform: scale(1.1);
+.c-text p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+  max-width: 100%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .contact-grid-modern {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .contact-card-v2:last-child {
-    grid-column: span 2;
   }
 }
 
 @media (max-width: 576px) {
   .contact-grid-modern {
     grid-template-columns: 1fr;
-  }
-  .contact-card-v2:last-child {
-    grid-column: span 1;
   }
 }
 
