@@ -792,6 +792,9 @@ input,textarea{font-family:inherit;outline:none}
   box-shadow: 0 10px 30px rgba(196, 122, 74, 0.15);
 }
 
+.icon-linkedin svg { color: #0077b5; }
+.icon-github svg { color: #fff; }
+
 .link-card:hover h4 {
   color: var(--accent-1);
 }
